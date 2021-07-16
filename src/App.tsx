@@ -4,6 +4,7 @@ import './App.css';
 import UseStateSimple from './components/UseStateSimple';
 import UseStateWithObject from './components/UseStateWithObject';
 import UseEffectSimple from './components/UseEffectSimple';
+import UseEffectWithObject from './components/UseEffectWithObject';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <UseStateWithObject />
       <hr />
       <UseEffectSimple />
+      <hr />
+      <UseEffectWithObject />
     </div>
   );
 }

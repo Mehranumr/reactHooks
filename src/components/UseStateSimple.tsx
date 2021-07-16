@@ -18,7 +18,7 @@ export default function UseStateSimple() {
 
     function Decrease() {
         setCount(count => count - 1)
-        setDate(time => new Date().toLocaleDateString())
+        setDate(date => new Date().toLocaleDateString())
     }
 
 

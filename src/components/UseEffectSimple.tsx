@@ -3,13 +3,12 @@ import React, { useEffect, useState } from 'react'
 function UseEffectSimple() {
 
     const [counter, setCounter] = useState(0)
-
-    //const timeOut = setInterval(() => setCounter(counter => counter + 1), 1000)
+    let date: string = new Date().toLocaleDateString();
 
     useEffect(() => {
-        const c = setInterval(() => setCounter(counter => counter + 1), 1000)
+        const timer = setInterval(() => setCounter(counter => counter + 1), 1000)
         return () => {
-            clearInterval(c)
+            clearInterval(timer)
         }
     }, [counter])
 
@@ -18,8 +17,10 @@ function UseEffectSimple() {
 
 
         <div>
-            <h2>Use Effect</h2>
-            <p>{counter}</p>
+            <h1>UseEffect Hook Without Object</h1>
+            <strong>Date: {date}</strong>
+            <br></br>
+            &nbsp;<strong>Counter: {counter}</strong>&nbsp;
         </div>
     )
 }
